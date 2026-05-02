@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/output.css">
+<style>
+    body { font-family: Tahoma, sans-serif; }
+</style>
     <title>Donnie's Portfolio</title>
 </head>
 <body class="bg-black font-[Tahoma] text-white">
-    <header class="fixed top-0 left-0 z-50 w-full h-[8vh] border-b border-amber-50/20 bg-white/10 backdrop-blur-lg grid grid-cols-2 content-center">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 z-50 w-full h-[8vh] border-b border-amber-50/20 bg-white/10 backdrop-blur-lg flex items-center justify-between px-4">
         <a href="index.html">
             <h2 class="pl-1.5 group">
                 Donnie's Portfolio
@@ -17,82 +22,129 @@
                 </svg>
             </h2>
         </a>
-        <nav class="flex flex-row gap-4">
-            <a href="https://www.linkedin.com/in/donald-ulu-0bb733231/" target="_blank" class="group text-gray-600 hover:text-white"><span>LinkedIn <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-3 w-3 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 inline"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></span></a>
-            <a href="" class="group text-gray-600 hover:text-white"><span>Resume <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-3 w-3 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 inline"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></span></a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex flex-row gap-4 items-center">
+            <a href="https://www.linkedin.com/in/donald-ulu-0bb733231/" target="_blank" class="group text-gray-400 hover:text-white transition-colors">
+                LinkedIn
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 inline"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+            </a>
+            <a href="" class="group text-gray-400 hover:text-white transition-colors">
+                Resume
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 inline"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+            </a>
+
+            <!-- Sections Dropdown -->
             <div class="relative inline-block group">
-            <a href="" class="group text-gray-600 hover:text-white">
-                <span>
+                <button class="text-gray-400 hover:text-white transition-colors cursor-pointer flex items-center gap-1">
                     Sections
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-3 w-3 transition-transform group-hover:-rotate-180 inline"><path d="M 0 0 L 10 10 L 20 0 Z" fill="none" stroke="currentColor" stroke-width="2"/>
-                    </svg> 
-                </span>
-                <div class="hidden group-hover:block absolute bg-purple-600 rounded-lg z-50 min-w-50">
-                    <ul class="p-[2vh]">
-                        <li class="m-[1vh] hover:bg-gray-500 p-[1vh] rounded-lg"><a href="#intro" class="block hover:text-white">Introduction</a></li>
-                        <li class="m-[1vh] hover:bg-gray-500 p-[1vh] rounded-lg"><a href="#projects" class="block hover:text-white">Projects</a></li>
-                        <li class="m-[1vh] hover:bg-gray-500 p-[1vh] rounded-lg"><a href="#about" class="block hover:text-white">About</a></li>
-                        <li class="m-[1vh] hover:bg-gray-500 p-[1vh] rounded-lg"><a href="#contact" class="block hover:text-white">Contact</a></li>
-                        <li class="m-[1vh] hover:bg-gray-500 p-[1vh] rounded-lg"><a href="#skills" class="block hover:text-white">Skills</a></li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:rotate-180"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="hidden group-hover:block absolute top-full mt-1 bg-purple-600 rounded-lg z-50 min-w-[160px]">
+                    <ul class="p-2">
+                        <li class="hover:bg-gray-500 rounded-lg"><a href="index.html" class="block p-2 hover:text-white">Introduction</a></li>
+                        <li class="hover:bg-gray-500 rounded-lg"><a href="about.html" class="block p-2 hover:text-white">About</a></li>
+                        <li class="hover:bg-gray-500 rounded-lg"><a href="projects.html" class="block p-2 hover:text-white">Projects</a></li>
+                        <li class="hover:bg-gray-500 rounded-lg"><a href="skills.html" class="block p-2 hover:text-white">Skills</a></li>
+                        <li class="hover:bg-gray-500 rounded-lg"><a href="experience.html" class="block p-2 hover:text-white">Experience</a></li>
+                        <li class="hover:bg-gray-500 rounded-lg"><a href="contact.html" class="block p-2 hover:text-white">Contact</a></li>
                     </ul>
                 </div>
-            </a>
             </div>
-            <a href="" class="group text-gray-600 hover:text-white"><span>
-                Contact
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-3 w-3 transition-transform group-hover:-rotate-180 inline"><path d="M 0 0 L 10 10 L 20 0 Z" fill="none" stroke="currentColor" stroke-width="2"/>
-                </svg>
-            </span></a>
+
+            <a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a>
         </nav>
+
+        <!-- Mobile Hamburger -->
+        <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+            <span class="block w-6 h-0.5 bg-white transition-all"></span>
+            <span class="block w-6 h-0.5 bg-white transition-all"></span>
+            <span class="block w-6 h-0.5 bg-white transition-all"></span>
+        </button>
     </header>
-    <div class="grid grid-cols-[20%_80%] w-full h-[92vh] border-b border-amber-50/20 mt-[8vh]">
-        <div class="h-full w-auto border-r border-amber-50/20 flex flex-col items-center">
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-[8vh] left-0 w-full bg-black/95 backdrop-blur-lg z-40 hidden flex-col p-6 gap-4 border-b border-amber-50/20">
+        <a href="https://www.linkedin.com/in/donald-ulu-0bb733231/" target="_blank" class="text-gray-400 hover:text-white py-2 border-b border-white/10">LinkedIn ↗</a>
+        <a href="" class="text-gray-400 hover:text-white py-2 border-b border-white/10">Resume ↗</a>
+        <a href="index.html" class="text-gray-400 hover:text-white py-2 border-b border-white/10">Introduction</a>
+        <a href="about.html" class="text-gray-400 hover:text-white py-2 border-b border-white/10">About</a>
+        <a href="projects.html" class="text-gray-400 hover:text-white py-2 border-b border-white/10">Projects</a>
+        <a href="skills.html" class="text-gray-400 hover:text-white py-2 border-b border-white/10">Skills</a>
+        <a href="experience.html" class="text-gray-400 hover:text-white py-2 border-b border-white/10">Experience</a>
+        <a href="contact.html" class="text-gray-400 hover:text-white py-2">Contact</a>
+    </div>
+
+    <!-- MAIN LAYOUT -->
+    <div class="w-full min-h-[92vh] border-b border-amber-50/20 mt-[8vh] md:grid" style="grid-template-columns: 20% 80%;">
+
+        <!-- Sidebar — hidden on mobile -->
+        <div class="hidden md:flex h-full w-auto border-r border-amber-50/20 flex-col items-center">
             <h3 class="text-xl font-semibold my-[3vh]">Sections</h3>
-            <ul>
+            <ul class="w-full px-4">
                 <a href="index.html"><li class="mb-[2vh] text-lg hover:bg-gray-500 block p-[1vh] rounded-lg">Introduction</li></a>
                 <a href="about.html"><li class="mb-[2vh] text-lg hover:bg-gray-500 block p-[1vh] rounded-lg">Get to know me</li></a>
                 <a href="projects.html"><li class="mb-[2vh] text-lg hover:bg-gray-500 block p-[1vh] rounded-lg">Projects</li></a>
                 <a href="skills.html"><li class="mb-[2vh] text-lg hover:bg-gray-500 block p-[1vh] rounded-lg">Skills & Qualifications</li></a>
                 <a href="experience.html"><li class="mb-[2vh] text-lg hover:bg-gray-500 block p-[1vh] rounded-lg">Experience</li></a>
                 <a href="contact.html"><li class="mb-[2vh] text-lg hover:bg-gray-500 block p-[1vh] rounded-lg">Contact</li></a>
-                <a href=""><li class="mb-[2vh] text-lg hover:bg-gray-500 block p-[1vh] rounded-lg"></li></a>
             </ul>
         </div>
-        <div>
-            <div class="h-full w-auto flex flex-col m-[5vh]">
-                <h1 class="text-3xl font-bold">About Me</h1>
-                <h3 class="text-2xl text-gray-500">Let's get into who Donald really is</h3>
-                <p class="text-xl pt-[3vh]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin imperdiet nisl est, ut efficitur mi convallis pulvinar. Cras lacinia euismod sapien et pulvinar. Aliquam erat volutpat. Etiam ultrices interdum felis at porttitor. Aliquam sit amet lacinia erat. Fusce imperdiet eu justo sed viverra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce lobortis, augue vitae bibendum fringilla, tortor diam vestibulum metus, vel ullamcorper sem orci a diam. Aenean mollis nunc eu justo ultrices, vitae accumsan sapien viverra. Aliquam ligula risus, fringilla sed tincidunt vel, ultrices in turpis. Duis porta tempus quam a maximus. Curabitur id consequat ipsum. Ut non mi maximus, malesuada velit imperdiet, venenatis ligula. Donec at dolor non nunc congue aliquam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                <div class="flex flex-row mt-[6vh] text-lg justify-between">
-                    <a href="index.html" class="p-[1vh] rounded-lg group hover:bg-gray-600">
+
+        <!-- Main Content -->
+        <div class="flex flex-col px-6 py-8 md:m-[5vh]">
+            <h1 class="text-2xl md:text-3xl font-bold">About Me</h1>
+            <h3 class="text-xl md:text-2xl text-gray-500 mt-1">Let's get into who Donald really is</h3>
+            <p class="text-base md:text-xl pt-[3vh] text-justify">
+                I'm a passionate web developer focused on building clean, responsive, and user-friendly websites. I have a solid foundation in HTML, CSS, and JavaScript and I enjoy turning ideas into functional and visually appealing digital experiences.
+                <br><br>
+                I've recently begun expanding my knowledge by learning React to build more dynamic and interactive applications. I'm driven by curiosity, attention to detail, and a desire to create seamless user experiences across different devices.
+                <br><br>
+                I take pride in writing clean code and delivering results, whether I'm crafting a simple landing page or developing a more complex interface.
+                <br><br>
+                I aim to contribute to projects that make a positive impact in my community and beyond.
+            </p>
+
+            <!-- Prev/Next Buttons — stacked on mobile, row on desktop -->
+            <div class="flex flex-col md:flex-row gap-3 md:gap-0 md:justify-between mt-[6vh] text-lg">
+                <a href="index.html" class="p-[1vh] rounded-lg group hover:bg-gray-600 text-center md:text-left">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left inline"><path d="m15 18-6-6 6-6"></path></svg>
-                        Previous
-                    </a>
-                    <a href="projects.html" class="p-[1vh] rounded-lg group hover:bg-gray-600">
-                        Next
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right inline"><path d="m9 18 6-6-6-6"></path></svg>
-                    </a>
-                </div>
+                    Previous
+                </a>
+                <a href="projects.html" class="p-[1vh] rounded-lg group hover:bg-gray-600 text-center md:text-right">
+                    Next
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right inline"><path d="m9 18 6-6-6-6"></path></svg>
+                </a>
             </div>
         </div>
     </div>
+
     <footer class="w-full h-auto text-sm">
         <div class="flex-col text-gray-600 my-[2vh]">
             <div class="text-center">
-                <span class="inline">Built with</span>
-                <span class="inline text-white">HTML<span class="inline text-gray-600">, </span></span>
-                <span class="inline text-white">Tailwind </span>
-                <span class="inline">and </span>
-                <span class="inline text-white">Javascript</span>
+                <span>Built with </span>
+                <span class="text-white">HTML</span><span>, </span>
+                <span class="text-white">Tailwind </span>
+                <span>and </span>
+                <span class="text-white">Javascript</span>
             </div>
             <div class="mt-[2vh] text-center">
                 <span class="block sm:inline">©2025</span>
-                <span class="hidden sm:inline align-middle">•</span>
+                <span class="hidden sm:inline align-middle"> • </span>
                 <span class="block sm:inline text-white">Donnie's Portfolio</span>
-                <span class="hidden sm:inline align-middle">•</span>
+                <span class="hidden sm:inline align-middle"> • </span>
                 <span class="block sm:inline">All rights reserved</span>
             </div>
         </div>
     </footer>
+
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+        });
+    </script>
 </body>
 </html>

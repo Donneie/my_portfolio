@@ -812,6 +812,11 @@
       min-height: calc(100vh - 4rem);
     }
   }
+  .md\:grid-cols-\[20\%_80\%\] {
+    @media (width >= 48rem) {
+      grid-template-columns: 20% 80%;
+    }
+  }
   .md\:flex-row {
     @media (width >= 48rem) {
       flex-direction: row;
